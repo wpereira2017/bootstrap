@@ -1,0 +1,21 @@
+$("#carouselButton").click(function(){
+    if ($("#carouselButton").children("span").hasClass('fa-pause')) {
+        $("#mycarousel").carousel('pause');
+        $("#carouselButton").children("span").removeClass('fa-pause');
+        $("#carouselButton").children("span").addClass('fa-play');
+    }
+    else if ($("#carouselButton").children("span").hasClass('fa-play')){
+        $("#mycarousel").carousel('cycle');
+        $("#carouselButton").children("span").removeClass('fa-play');
+        $("#carouselButton").children("span").addClass('fa-pause');                    
+    }
+});
+
+// Task2-3: Js to toggle Reserve and Login Modals
+$("#btnReserveTable").click(function(){
+    $("#reservationModal").modal("show");
+})
+
+$("#btnLogin").click(function(){
+    $("#loginModal").modal("show");
+})
